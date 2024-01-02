@@ -1,0 +1,28 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/template
+# Diagnostic reports (https://nodejs.org/api/report.html)
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+# production
+.mfe/
+build/
+dist/
+importmap.json
+# misc
+.DS_Store
+src.tar.gz
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.eslintcache
+.dll-link-plugin/
+.cache-loader/
+tests/e2e/auto.e2e.js
+.idea
+
+.history
+.yalc
+
