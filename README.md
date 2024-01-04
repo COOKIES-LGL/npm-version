@@ -3,8 +3,6 @@
 ## 项目初始化
 [参考地址](https://code.visualstudio.com/api/get-started/your-first-extension)
 
-This is the README for your extension "npm-version". After writing up a brief description, we recommend including the following sections.
-
 ## Extension Settings
 
 Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
@@ -27,14 +25,6 @@ Users appreciate release notes as you update your extension.
 ### 1.0.0
 
 Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
 
 ---
 

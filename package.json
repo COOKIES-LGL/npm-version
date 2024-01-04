@@ -2,7 +2,7 @@
   "name": "npm-version",
   "displayName": "NPM Version",
   "description": "show npm version directly",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.85.0"
   },
@@ -10,16 +10,16 @@
     "Other"
   ],
   "icon": "assets/icon.png",
-  "activationEvents": [],
   "contributes": {
-    "commands": 
+    "commands": [
       {
-        "command": "npm-version.helloWorld",
-        "title": "Hello World"
+        "command": "npm-version.open",
+        "title": "Open In Npm"
       }
     ]
   },
   "scripts": {
+    "vsce": "vsce package",
     "vscode:prepublish": "yarn run package",
     "compile": "webpack",
     "watch": "webpack --watch",
@@ -31,17 +31,29 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.85.0",
+    "@types/absolute": "^0.0.31",
+    "@types/find-up": "^4.0.0",
+    "@types/lodash-es": "^4.17.6",
     "@types/mocha": "^10.0.6",
-    "@types/node": "18.x",
+    "@types/node": "^20.10.6",
+    "@types/open": "^6.2.1",
+    "@types/pify": "^5.0.4",
+    "@types/vscode": "^1.85.0",
     "@typescript-eslint/eslint-plugin": "^6.15.0",
     "@typescript-eslint/parser": "^6.15.0",
-    "eslint": "^8.56.0",
-    "typescript": "^5.3.3",
-    "ts-loader": "^9.5.1",
-    "webpack": "^5.89.0",
-    "webpack-cli": "^5.1.4",
     "@vscode/test-cli": "^0.0.4",
-    "@vscode/test-electron": "^2.3.8"
+    "@vscode/test-electron": "^2.3.8",
+    "eslint": "^8.56.0",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.3.3",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "absolute": "^0.0.1",
+    "find-up": "^7.0.0",
+    "lodash-es": "^4.17.21",
+    "open": "^8.0.0",
+    "pify": "^3.0.0"
   }
 }
