@@ -46,3 +46,44 @@ export const folderGetWrapperPathOf = async (
     }
   }
 };
+
+export const openFolderNewWindow = (folderPath: string, inNewWindow: boolean = true) => {
+  folderPath = path.normalize(folderPath);
+  const folderUri = vscode.Uri.file(folderPath);
+  vscode.commands.executeCommand('vscode.openFolder', folderUri, inNewWindow);
+};
+
+/**
+ * 在编辑器中打开文本文件
+ * @param filePath 文件目录
+ */
+export const openFile = (filePath: string) => {
+  const openPath = vscode.Uri.file(filePath);
+  // 白名单文件，默认认为这些文件存在
+  const whiteFileList = [
+    'package.json',
+    'index.js',
+    'index.ts',
+    'index.mjs',
+    'index.cjs',
+    'main.js',
+    'main.ts',
+    'main.mjs',
+    'main.cjs'
+  ];
+  for (let i = 0; i < whiteFileList.length; i++) {
+    const fileName = whiteFileList[i];
+    // 组装文件路径
+    const filePath = path.resolve(openPath.path, fileName);
+    // 如果文件存在
+    if (fs.existsSync(filePath)) {
+      (process as any).__fe_jump_current_path__ = filePath;
+      vscode.workspace.openTextDocument(filePath).then(doc => {
+        vscode.window.showTextDocument(doc);
+        // 定位左侧文件树
+        vscode.commands.executeCommand('revealInExplorer', filePath);
+      });
+      return;
+    }
+  }
+};

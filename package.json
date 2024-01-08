@@ -3,6 +3,8 @@
   "displayName": "NPM Version",
   "description": "show npm version directly",
   "version": "0.0.2",
+  "license": "MIT",
+  "publisher": "lgl",
   "engines": {
     "vscode": "^1.85.0"
   },
@@ -10,13 +12,65 @@
     "Other"
   ],
   "icon": "assets/icon.png",
+  "main": "./dist/extension.js",
+  "activationEvents": [
+    "onCommand:openInNPM.open"
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "vscode",
+    "extension",
+    "open",
+    "npm"
+  ],
   "contributes": {
     "commands": [
       {
         "command": "npm-version.open",
         "title": "Open In Npm"
+      },
+      {
+        "command": "npm-version.openInNodeModules",
+        "title": "Open In Node Modules"
+      },
+      {
+        "command": "npm-version.openInNewWindow",
+        "title": "Open In New Window"
       }
-    ]
+    ],
+    "keybindings": [
+      {
+        "command": "npm-version.open",
+        "key": "ctrl+shift+l",
+        "mac": "cmd+shift+l",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "npm-version.openInNodeModules",
+        "key": "ctrl+m",
+        "mac": "cmd+m",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "npm-version.openInNewWindow",
+        "key": "ctrl+alt+m",
+        "mac": "cmd+alt+m",
+        "when": "editorTextFocus"
+      }
+    ],
+    "configuration": {
+      "title": "Npm Version Configuration",
+      "properties": {
+        "npm-version.registry": {
+          "type": "string",
+          "default": "https://www.npmjs.com/package",
+          "markdownDescription": "%npm-version.registry%"
+        }
+      }
+    }
   },
   "scripts": {
     "vsce": "vsce package",
@@ -38,6 +92,7 @@
     "@types/node": "^20.10.6",
     "@types/open": "^6.2.1",
     "@types/pify": "^5.0.4",
+    "@types/resolve-from": "^5.0.1",
     "@types/vscode": "^1.85.0",
     "@typescript-eslint/eslint-plugin": "^6.15.0",
     "@typescript-eslint/parser": "^6.15.0",
@@ -54,6 +109,7 @@
     "find-up": "^7.0.0",
     "lodash-es": "^4.17.21",
     "open": "^8.0.0",
-    "pify": "^3.0.0"
+    "pify": "^3.0.0",
+    "resolve-from": "^5.0.0"
   }
 }

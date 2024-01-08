@@ -2,9 +2,9 @@ import { compact, attempt, isError, castArray } from 'lodash-es';
 import openPath from 'open';
 import * as path from 'path';
 import * as vscode from 'vscode';
-import { readFile, folderGetRootPath, folderGetWrapperPathOf } from './utils';
+import { readFile, folderGetRootPath, folderGetWrapperPathOf } from '../utils';
 
-async function open(pkg?: string | string[]) {
+async function openChrome(pkg?: string | string[]) {
   /* SELECTIONS */
   if (!pkg) {
     const editor = vscode.window.activeTextEditor;
@@ -19,7 +19,6 @@ async function open(pkg?: string | string[]) {
 
   /* PROJECT NAME */
   let projectName;
-
   if (!pkg) {
     const editor = vscode.window.activeTextEditor,
       editorPath = editor && editor.document.uri.fsPath,
@@ -48,15 +47,17 @@ async function open(pkg?: string | string[]) {
   /* INPUT BOX */
   if (!pkg) {
     pkg = await vscode.window.showInputBox({
-      placeHolder: 'NPM package name...',
+      placeHolder: 'input package name...',
       value: projectName
     });
   }
 
   /* OPEN */
   if (pkg) {
-    castArray(pkg).map(pkg => openPath(`https://www.npmjs.com/package/${pkg}`));
+    const config = await vscode.workspace.getConfiguration('npm-version');
+    const npmRegistry = config.registry || 'https://www.npmjs.com/package/';
+    castArray(pkg).map(pkg => openPath(path.join(npmRegistry, pkg)));
   }
 }
 
-export default open;
+export default openChrome;
