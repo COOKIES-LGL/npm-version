@@ -67,7 +67,7 @@
         "npm-version.registry": {
           "type": "string",
           "default": "https://www.npmjs.com/package",
-          "markdownDescription": "%npm-version.registry%"
+          "markdownDescription": "npm-version.registry"
         }
       }
     }
