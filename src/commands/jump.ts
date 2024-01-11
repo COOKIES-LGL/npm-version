@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
-const childProcess = require('child_process');
-const path = require('path');
-const fs = require('fs');
+import childProcess from 'child_process';
+import path from 'path';
+import fs from 'fs';
 
 interface Process {
   // 临时变量，为了连接 Definition 触发后，和 onDidChangeActiveTextEditor 监听时的问题，该方法依旧不完美，但是也不会出现异常情况，可以放心使用
