@@ -5,6 +5,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "publisher": "lgl",
+  "author": "guiLin.li",
   "engines": {
     "vscode": "^1.85.0"
   },
