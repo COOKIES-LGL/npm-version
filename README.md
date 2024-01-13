@@ -12,13 +12,11 @@ Include if your extension adds any VS Code settings through the `contributes.con
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
+项目初始化
 
 ### 1.0.0
 
 ---
-
-## Following extension guidelines
 
 ### 快捷使用
 
@@ -51,7 +49,8 @@ Users appreciate release notes as you update your extension.
 
 - Open In New Window (`Cmd+Alt+m` on macOS or `Ctrl+Alt+m` on Windows and Linux).
 - Open In Node Modules (`Cmd+m` on macOS or `Ctrl+m` on Windows and Linux).
-- Open In npm.com (`Cmd+Shift+l` on macOS `ctrl+shift+l` on Windows, Linux).
+- Open In npm.com (`Cmd+Shift+l` on macOS
+  or `ctrl+shift+l` on Windows, Linux).
 
 ## For more information
 
