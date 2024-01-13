@@ -6,6 +6,10 @@
   "license": "MIT",
   "publisher": "lgl",
   "author": "guiLin.li",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:COOKIES-LGL/npm-version.git"
+  },
   "engines": {
     "vscode": "^1.85.0"
   },
@@ -17,10 +21,6 @@
   "activationEvents": [
     "onCommand:openInNPM.open"
   ],
-  "repository": {
-    "type": "git",
-    "url": ""
-  },
   "keywords": [
     "vscode",
     "extension",
