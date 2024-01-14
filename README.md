@@ -50,7 +50,7 @@ Include if your extension adds any VS Code settings through the `contributes.con
 - Open In New Window (`Cmd+Alt+m` on macOS or `Ctrl+Alt+m` on Windows and Linux).
 - Open In Node Modules (`Cmd+m` on macOS or `Ctrl+m` on Windows and Linux).
 - Open In npm.com (`Cmd+Shift+l` on macOS
-  or `ctrl+shift+l` on Windows, Linux).
+  or `Ctrl+Shift+l` on Windows, Linux).
 
 ## For more information
 
