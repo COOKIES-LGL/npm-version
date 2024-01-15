@@ -3,9 +3,9 @@
   "displayName": "NPM Version",
   "description": "show npm version directly",
   "version": "1.0.0",
-  "license": "MIT",
-  "publisher": "lgl",
   "author": "guiLin.li",
+  "publisher": "guilin.li",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git@github.com:COOKIES-LGL/npm-version.git"
