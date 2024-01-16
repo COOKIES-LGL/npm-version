@@ -1,8 +1,10 @@
-嘎嘎好用的 npm 包定位插件，支持：
+### npm 包定位插件，
 
-- 快速在 node_module 中打开选中的 npm 包，
-- 在新窗口打开选中的 npm 包进行源码阅读
-- 在 npm.com 中打开选中的 npm 包快速了解包信息，`npm registry` 可以自行配置成公司内部源
+支持：
+
+- 快速在 node_module 中打开选中的 npm 包.
+- 在新窗口打开选中的 npm 包进行源码阅读.
+- 在 npm.com 中打开选中的 npm 包快速了解包信息，`npm registry` 可以自行配置成公司内部源.
 
 [参考地址](https://code.visualstudio.com/api/get-started/your-first-extension)
 
