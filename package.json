@@ -1,10 +1,10 @@
 {
   "name": "npm-version",
   "displayName": "NPM Version",
-  "description": "show npm version directly",
+  "description": "show npm directly",
   "version": "1.0.0",
   "author": "guiLin.li",
-  "publisher": "guilin.li",
+  "publisher": "guilinli",
   "license": "MIT",
   "repository": {
     "type": "git",
