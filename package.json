@@ -1,8 +1,8 @@
 {
-  "name": "npm-version",
-  "displayName": "NPM Version",
+  "name": "open-npm",
+  "displayName": "OPEN NPM",
   "description": "show npm directly",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "guiLin.li",
   "publisher": "guilinli",
   "license": "MIT",
@@ -30,45 +30,45 @@
   "contributes": {
     "commands": [
       {
-        "command": "npm-version.open",
+        "command": "open-npm.open",
         "title": "Open In Npm"
       },
       {
-        "command": "npm-version.openInNodeModules",
+        "command": "open-npm.openInNodeModules",
         "title": "Open In Node Modules"
       },
       {
-        "command": "npm-version.openInNewWindow",
+        "command": "open-npm.openInNewWindow",
         "title": "Open In New Window"
       }
     ],
     "keybindings": [
       {
-        "command": "npm-version.open",
+        "command": "open-npm.open",
         "key": "ctrl+shift+l",
         "mac": "cmd+shift+l",
         "when": "editorTextFocus"
       },
       {
-        "command": "npm-version.openInNodeModules",
+        "command": "open-npm.openInNodeModules",
         "key": "ctrl+m",
         "mac": "cmd+m",
         "when": "editorTextFocus"
       },
       {
-        "command": "npm-version.openInNewWindow",
+        "command": "open-npm.openInNewWindow",
         "key": "ctrl+alt+m",
         "mac": "cmd+alt+m",
         "when": "editorTextFocus"
       }
     ],
     "configuration": {
-      "title": "Npm Version Configuration",
+      "title": "Open Npm Configuration",
       "properties": {
-        "npm-version.registry": {
+        "open-npm.registry": {
           "type": "string",
           "default": "https://www.npmjs.com/package",
-          "markdownDescription": "npm-version.registry"
+          "markdownDescription": "open-npm.registry"
         }
       }
     }

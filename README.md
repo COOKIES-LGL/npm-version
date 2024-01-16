@@ -12,7 +12,7 @@
 
 Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
 
-- `npm-version.registry`: set the registry for jump navigate.
+- `open-npm.registry`: set the registry for jump navigate.
 
 ## Release Notes
 
@@ -28,19 +28,19 @@ Include if your extension adds any VS Code settings through the `contributes.con
 {
   "keybindings": [
     {
-      "command": "npm-version.open",
+      "command": "open-npm.open",
       "key": "ctrl+shift+l",
       "mac": "cmd+shift+l",
       "when": "editorTextFocus"
     },
     {
-      "command": "npm-version.openInNodeModules",
+      "command": "open-npm.openInNodeModules",
       "key": "ctrl+m",
       "mac": "cmd+m",
       "when": "editorTextFocus"
     },
     {
-      "command": "npm-version.openInNewWindow",
+      "command": "open-npm.openInNewWindow",
       "key": "ctrl+alt+m",
       "mac": "cmd+alt+m",
       "when": "editorTextFocus"

@@ -11,18 +11,18 @@ interface Process {
 declare const process: Process & NodeJS.Process;
 process.__fe_jump_current_path__ = '';
 export const activate = (context: vscode.ExtensionContext) => {
-  // const extensions = vscode.extensions.getExtension('npm-version'); 可以获取当前扩展程序
-  const disposable = vscode.commands.registerCommand('npm-version.open', () => openChrome());
+  // const extensions = vscode.extensions.getExtension('open-npm'); 可以获取当前扩展程序
+  const disposable = vscode.commands.registerCommand('open-npm.open', () => openChrome());
   context.subscriptions.push(disposable);
   const disposableNodeModules = vscode.commands.registerCommand(
-    'npm-version.openInNodeModules',
+    'open-npm.openInNodeModules',
     () => {
       openPackageIn(openFile);
     }
   );
   context.subscriptions.push(disposableNodeModules);
   const disposableNewWindowOpenPkg = vscode.commands.registerCommand(
-    'npm-version.openInNewWindow',
+    'open-npm.openInNewWindow',
     () => {
       openPackageIn(openFolderNewWindow);
     }

@@ -54,7 +54,7 @@ async function openChrome(pkg?: string | string[]) {
 
   /* OPEN */
   if (pkg) {
-    const config = await vscode.workspace.getConfiguration('npm-version');
+    const config = await vscode.workspace.getConfiguration('open-npm');
     const npmRegistry = config.registry || 'https://www.npmjs.com/package/';
     castArray(pkg).map(pkg => openPath(path.join(npmRegistry, pkg)));
   }
