@@ -14,6 +14,10 @@ Include if your extension adds any VS Code settings through the `contributes.con
 
 - `open-npm.registry`: set the registry for jump navigate.
 
+### demo
+
+![demo](https://github.com/COOKIES-LGL/npm-version/blob/master/assets/open-npm.gif)
+
 ## Release Notes
 
 项目初始化
