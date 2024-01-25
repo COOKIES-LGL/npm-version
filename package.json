@@ -2,13 +2,13 @@
   "name": "open-npm",
   "displayName": "OPEN NPM",
   "description": "show npm directly",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": "guiLin.li",
   "publisher": "guilinli",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:COOKIES-LGL/npm-version.git"
+    "url": "https://github.com/COOKIES-LGL/npm-version.git"
   },
   "engines": {
     "vscode": "^1.85.0"
