@@ -16,7 +16,7 @@ Include if your extension adds any VS Code settings through the `contributes.con
 
 ### demo
 
-![demo](https://github.com/COOKIES-LGL/npm-version/blob/master/assets/open-npm.gif)
+![demo](./assets/open-npm.gif)
 
 ## Release Notes
 
